@@ -17,4 +17,11 @@ Here is the [tutorial](https://github.com/XuanCao-CX/Spatial-CUT-Tag_analyse_pip
 
 ### 2.Spatially coherence genes detection
 
-We applied Giotto (v1.1.2) to evaluate spatially coherent genes. Firstly, we loaded the gene score matrix, together with the spatial coordinates of the spots, to create the giotto object. Secondly, we created the spatial network connecting spots based on their physical distance by applying the createSpatialNetwork function (method = kNN, minimum_k = 0, k=10, maximum_distance_knn = 40). To calculate spatially coherent genes, we used the binSpect (Binary Spatial extract) function and selected top 200 genes ranked by adj.p.value in further analysis.
+We applied Giotto (v1.1.2) to evaluate spatially coherent genes. Firstly, we loaded the gene score matrix, together with the spatial coordinates of the spots, to create the giotto object. Secondly, we created the spatial network connecting spots based on their physical distance by applying the createSpatialNetwork function (method = kNN, minimum_k = 0, k=10, maximum_distance_knn = 40). To calculate spatially coherent genes, we used the binSpect (Binary Spatial extract) function and selected top 200 genes ranked by adj.p.value in further analysis. 
+
+### 3.Spatial co-localization modules
+
+To identify spatial co-localization modules, we applied the binSpect method implemented in Giotto and identified the top 200 spatially coherent genes. We used the function detectSpatialCorGenes (method = network, spatial_network_name = kNN_network) to calculate a gene-to-gene correlation score matrix followed by function clusterSpatialCorGenes (hclust_method = ward.D2, k = 8) to identified co-localization  modules by hierarchical clustering the gene-to-gene correlation score matrix. Finally, we used the function createMetagenes to summarize the overall spatial pattern for each module.
+
+Here is the [tutorial](https://github.com/XuanCao-CX/Spatial-CUT-Tag_analyse_pipeline/blob/main/2.H3K4me3_spatial_gene_and_modules_in_Giotto.ipynb) for identifying H3K4me3 spatial genes and modules.
+Here is the [tutorial](https://github.com/XuanCao-CX/Spatial-CUT-Tag_analyse_pipeline/blob/main/5.H3K27me3_spatial_gene_and_modules_in_Giotto.ipynb) for identifying H3K27me3 spatial genes and modules.
