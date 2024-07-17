@@ -13,6 +13,7 @@ Xuan Cao, Terry Ma, Rong Fan, Guo-Cheng Yuan. Broad H3K4me3 Domain Is Associated
 ### 1.Pre-processing spatial-CUT&Tag data
 
 We used ArchR (v1.0.1) 21 to pre-process the data and perform downstream analyses of the spatial-CUT&Tag data. We converted the fragments file into a tile matrix. Then perfored the latent semantic indexing (LSI), UMAP and clustering.
+
 Here is the [tutorial](https://github.com/XuanCao-CX/Spatial-CUT-Tag_analyse_pipeline/blob/main/1.LSI_UMAP_spatial-CUT%26TAG_in_ArchR.ipynb) for process spatial-CUT&Tag on H3K4me3.
 
 ### 2.Spatially coherence genes detection
@@ -26,3 +27,16 @@ To identify spatial co-localization modules, we applied the binSpect method impl
 Here is the [tutorial](https://github.com/XuanCao-CX/Spatial-CUT-Tag_analyse_pipeline/blob/main/2.H3K4me3_spatial_gene_and_modules_in_Giotto.ipynb) for identifying H3K4me3 spatial genes and modules.
 
 Here is the [tutorial](https://github.com/XuanCao-CX/Spatial-CUT-Tag_analyse_pipeline/blob/main/5.H3K27me3_spatial_gene_and_modules_in_Giotto.ipynb) for identifying H3K27me3 spatial genes and modules.
+
+### 4.Multi-scale chromatin state annotation by using diHMM
+ 
+We applied the diHMM method to identify both nucleosome- and domain-level chromatin states, using its Python/C++ implementation. The fragments of H3K4me3 across each cluster were divided into 100 bp bins, and the fragment counts were binarized by using n=5 cutoff. Next, we trained the diHMM model by using the following parameter setting: domain_size=5, domain_states=2, bin_states=2, bin_size=100. 
+
+Here is the [tutorial](https://github.com/XuanCao-CX/Spatial-CUT-Tag_analyse_pipeline/blob/main/3.diHMM_domain_calling%20.ipynb) for running diHMM.
+
+### 5.Integration of H3K4me3 and H3K27me3 data 
+
+Here is the [tutorial](https://github.com/XuanCao-CX/Spatial-CUT-Tag_analyse_pipeline/blob/main/4.align_spots.H3K27me3_to_H3K4me3.ipynb) for align two modilities.
+
+
+
