@@ -9,3 +9,6 @@ Xuan Cao, Terry Ma, Rong Fan, Guo-Cheng Yuan. Broad H3K4me3 Domain Is Associated
 
 
 ## Analyse workflow
+
+### 1.Pre-processing spatial-CUT&Tag data
+
