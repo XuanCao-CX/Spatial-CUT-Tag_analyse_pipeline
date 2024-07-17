@@ -24,4 +24,5 @@ We applied Giotto (v1.1.2) to evaluate spatially coherent genes. Firstly, we loa
 To identify spatial co-localization modules, we applied the binSpect method implemented in Giotto and identified the top 200 spatially coherent genes. We used the function detectSpatialCorGenes (method = network, spatial_network_name = kNN_network) to calculate a gene-to-gene correlation score matrix followed by function clusterSpatialCorGenes (hclust_method = ward.D2, k = 8) to identified co-localization  modules by hierarchical clustering the gene-to-gene correlation score matrix. Finally, we used the function createMetagenes to summarize the overall spatial pattern for each module.
 
 Here is the [tutorial](https://github.com/XuanCao-CX/Spatial-CUT-Tag_analyse_pipeline/blob/main/2.H3K4me3_spatial_gene_and_modules_in_Giotto.ipynb) for identifying H3K4me3 spatial genes and modules.
+
 Here is the [tutorial](https://github.com/XuanCao-CX/Spatial-CUT-Tag_analyse_pipeline/blob/main/5.H3K27me3_spatial_gene_and_modules_in_Giotto.ipynb) for identifying H3K27me3 spatial genes and modules.
