@@ -12,3 +12,6 @@ Xuan Cao, Terry Ma, Rong Fan, Guo-Cheng Yuan. Broad H3K4me3 Domain Is Associated
 
 ### 1.Pre-processing spatial-CUT&Tag data
 
+We used ArchR (v1.0.1) 21 to pre-process the data and perform downstream analyses of the spatial-CUT&Tag data. We converted the fragments file into a tile matrix. Then perfored the latent semantic indexing (LSI), UMAP and clustering.
+Here is the [tutorial](https://github.com/XuanCao-CX/Spatial-CUT-Tag_analyse_pipeline/blob/main/1.LSI_UMAP_spatial-CUT%26TAG_in_ArchR.ipynb)
+
